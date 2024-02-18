@@ -1,0 +1,82 @@
+<!-- start -->
+<div class="hero-section">
+<div class="hero-title">
+  <h1 class="hero-header">
+    FRESH WAY
+  </h1>
+  <p>
+    كل لقمة تحمل نكهة الانتعاش والحيوية. اكتشف بستاننا اليوم
+  </p>
+  <div class="hero-btn">
+    <button class="my-btn" routerLink="/store">
+      المتجر
+    </button>
+  </div>
+</div>
+</div>
+<!-- end -->
+
+<!-- start -->
+<div class="product-section container">
+  <div class="my-cards">
+    <div class="my-card" *ngFor="let product of products">
+      <!-- <a [routerLink]="['/user/item' , product.id ]"> -->
+      <div class="card-img">
+        <img src="./../../../assets/imgs/testProd.jpg" alt="">
+      </div>
+      <div class="card-content">
+        <h2 class="prod-name mt-5">
+          لوريم إيبسوم
+        </h2>
+        <p class="prod-price">
+          3000 ريال سعودي
+        </p>
+      </div>
+      <!-- </a> -->
+    </div>
+  </div>
+  <div class="viewAll-btn">
+    <button class="my-btn" routerLink="/store">
+      شاهد المزيد
+    </button>
+  </div>
+</div>
+<!-- end -->
+
+<!-- start -->
+<div class="why-us-section">
+  <div>
+  <div class="content">
+    <h2 class="about">
+      من نحن ؟
+    </h2>
+    <p>
+      "فريش واي تعمل على توفير أجود أنواع الفواكه الطازجة، نقدم تجربة فريدة لعملائنا للاستمتاع بنكهات طبيعية لا تقاوم.
+      اختيارنا الدقيق وجودتنا الممتازة تجعلنا وجهة مفضلة لمحبي الصحة والطعام الطازج."
+    </p>
+  </div>
+  <div class="content">
+    <h2 class="whyus">
+      لماذا تختارنا؟
+    </h2>
+    <ul>
+      <li>
+        جودة فائقة: نحرص على تقديم أجود أنواع الفواكه الطازجة لعملائنا، مع التركيز على الجودة والطعم الرائع.
+      </li>
+      <li>
+        دائماً طازج: نضمن لكم تجربة تسوق فريدة بفضل تقديمنا للفواكه الطازجة والمنعشة دائماً.
+      </li>
+      <li>
+        تنوع المنتجات: نقدم تشكيلة واسعة من الفواكه الطازجة لتلبية احتياجات جميع العملاء.
+      </li>
+      <li>
+        التزام بالصحة والسلامة: نلتزم بأعلى معايير السلامة والنظافة في معالجة وتوزيع منتجاتنا لضمان صحة عملائنا
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="whyUs-img">
+    <img src="./../../../assets/imgs/bg6.png" alt="">
+  </div>
+</div>
+<!-- end -->

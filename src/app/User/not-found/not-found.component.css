@@ -1,0 +1,28 @@
+.notFound-section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+button{
+  margin-top: 2rem;
+}
+button:hover{
+  opacity: .9;
+}
+/* query */
+@media (width < 338px) {
+  .notFound-section {
+    font-size: 1.3rem !important;
+        padding: 1.7rem;
+  }
+    button{
+      width: 80%;
+      padding: .8rem;
+      font-size: 1.5rem;
+    }
+  .notFound-img img{
+    width: 50%;
+  }
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+:root {
+  --bg-clr: #18623c;
+  --background-color: #fff;
+  --txt-clr: #161616;
+  --sec-clr: #80b435;
+  --thrd-clr: #666;
+  --fourth-clr: #ea8800;
+  --fif-clr:#f3f3f3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--background-color);
+  direction: rtl;
+  font-size: 1.4rem;
+  color: var(--txt-clr);
+}
+a{
+  all: unset;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  color: var(--background-color);
+}
+
+.my-btn {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--bg-clr);
+  color: var(--fourth-clr);
+  padding: .3rem 3rem;
+  font-size: 1.5rem;
+  display: block;
+  font-family: 'Cairo', sans-serif;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: .99;
+}
+.container{
+  width: 90% !important;
+  margin: auto !important;
+}

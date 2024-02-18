@@ -1,0 +1,68 @@
+footer {
+  margin-top: 20rem;
+  background-color: var(--fif-clr);
+  padding: 0 2rem 0;
+  color: var(--bg-clr);
+  direction: ltr;
+  position: relative;
+}
+
+footer::before {
+  content: " ";
+  display: block;
+  height: 200px;
+  width: 100%;
+  background-image: url(./../../../assets/imgs/bgfooter.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 99%;
+  left: 0;
+  right: 0;
+}
+
+footer div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  line-height: 2.5rem;
+}
+
+.contact-icon {
+  text-align: center;
+}
+
+.contact-icon i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.contact-icon i:hover {
+  opacity: .9;
+}
+
+i:not(.fa-facebook-f) {
+  padding-left: 2rem;
+}
+
+i:last-child {
+  padding-right: 2rem;
+}
+
+footer p {
+  color: var(--thrd-clr);
+  border-top: .1rem solid var(--thrd-clr);
+  padding: .7rem 0;
+}
+
+footer p span {
+  color: var(--fourth-clr);
+}
+/* media query */
+@media (width < 569px) {
+  footer p {
+    font-size: 1.3rem !important;
+  }
+}

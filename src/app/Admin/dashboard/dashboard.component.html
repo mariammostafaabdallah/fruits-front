@@ -1,0 +1,109 @@
+<div class="dashboard-section">
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+    <div class="container-fluid py-4 mt-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">المنتج</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">الوصف</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">السعر
+                      </th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        الوزن</th>
+                      <th class="text-secondary opacity-7"></th>
+                      <th class="text-secondary opacity-7"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let product of productList">
+                      <td class="pe-4">
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img [src]="imgBaseUrl+product.imageUrl" class="avatar avatar-sm me-3" alt="">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">{{product.name
+                            }}</h6>
+
+                          </div>
+                        </div>
+                      </td>
+                      <td class="pe-4">
+                        <p class="text-xs font-weight-bold fs-5 mb-0">{{product.
+                          description
+                          }}</p>
+                      </td>
+                      <td class="align-middle text-center text-sm pe-4">
+                        <span class="text-secondary text-xs font-weight-bold">{{product.price}}</span>
+                      </td>
+                      <td class="align-middle text-center pe-4">
+                        <span class="text-secondary text-xs font-weight-bold">{{product.weight
+                        }}</span>
+                      </td>
+                      <td class="align-middle btn btn-success text-dark pe-4" (click)="Delete(product.
+                      _id)">
+                       Delete
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- start -->
+  <div class="row m-0 add-prod align-items-center">
+    <div class="col-6 upload-img text-center">
+      <label for="inputFile" class="w-75 upload-img-label">
+        <input type="file" class="input-file p-5" id="inputFile" #img (change)="uploadimg(img)" hidden>
+        <div class="text-center p-4">
+          <i class="fa-solid fa-arrow-up-from-bracket fs-1 mb-3 text-secondary"></i>
+          <div>Drag And Drop Image<br>OR</div>
+          <span class="btn upload-img-btn mt-1">Browse</span>
+        </div>
+        <img class="offer-img" [src]="ImgUrl" alt="">
+      </label>
+    </div>
+    <div class="col-5 p-0">
+      <form class="creat-offer-form w-100" (ngSubmit)="Add()" [formGroup]="prodForm">
+        <input type="text" class="form-control" id="offerTitle" placeholder="الاسم" formControlName="name">
+        <div class="form-floating">
+          <textarea class="form-control h-100" placeholder="Description" id="descTextarea" rows="5"
+            formControlName="description"></textarea>
+          <label for="descTextarea" class="desc text-secondary">الوصف</label>
+        </div>
+        <div class="price">
+          <input type="text" class="form-control" id="offerTitle"  placeholder="السعر" formControlName="price">
+        </div>
+        <div class="price">
+          <input type="text" class="form-control" id="offerTitle" placeholder="الوزن" formControlName="weight">
+        </div>
+
+        <button class="btn btn-success text-dark add-offer-btn px-3  mt-3 mb-5" type="submit">Add</button>
+        <!-- <button class="btn add-offer-btn px-3 mt-3" type="button" *ngIf="isUpdate ==true" (click)="Update()">Save</button> -->
+
+      </form>
+    </div>
+  </div>
+  <!-- end -->
+
+  <!-- start -->
+          <div class="form-floating container mt-5">
+            <textarea class="form-control h-100" placeholder="Description" id="descTextarea" rows="5"
+              formControlName="Description"></textarea>
+            <label for="descTextarea" class="desc text-secondary ps-5">من نحن</label>
+            <button class="btn btn-success text-dark add-offer-btn px-3  mt-3 mb-5" type="submit" (click)="AddAbout()">Add</button>
+          </div>
+  <!-- end -->
+</div>
